@@ -1,12 +1,18 @@
-N = [3]
-M1 = int(2)
-languages_1 = {1: "Russian", 2: "English"}
-M2 = int(3)
-languages_2 = {1: "Russian", 2: "Belarusian", 3: "English"}
-print(M1 + M2)
-print(languages_2)
-print(languages_1)
-
+lang = []
+union = set()
+all = set()
+for i in range(int(input())):
+    m = int(input())
+    a = {input() for j in range(m)}
+    all.update(a)
+    if i == 1:
+        union.update(a)
+    else:
+        union &= a
+print(len(union))
+print('\n'.join(sorted(union)))
+print(len(all))
+print('\n'.join(sorted(all)))
 
 
 
